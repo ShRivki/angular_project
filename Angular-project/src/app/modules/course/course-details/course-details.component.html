@@ -1,0 +1,27 @@
+<div *ngIf="course">
+    name:{{course.name}}
+    <br/>
+    <img src="{{ course.image }}" [ngStyle]="{ 'width.px': 350, 'height.rem': 16 }" />
+    <br />
+    <div>category:{{category.name}}
+    </div>
+
+    countLesson:{{course.countLesson}}
+    <br/>
+    wayLearning:{{course.wayLearning}}
+    <br/>
+    <label>sillibos</label>
+    <ul *ngFor="let i of course.sillibos">
+        <li>{{i}}</li>
+    </ul>
+    <ng-container *ngIf="lecturer">
+        <label>lecturer:</label>
+        <div>
+            <label>name:</label>
+            {{lecturer.name}}
+            <label>email:</label>
+            {{lecturer.email}}
+        </div>
+    </ng-container>
+
+</div>

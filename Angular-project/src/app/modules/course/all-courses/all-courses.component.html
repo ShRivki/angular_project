@@ -1,0 +1,19 @@
+<p>all-courses works!</p>
+<!-- <input type="text" placeholder="enter name of course" [(ngModel)]="courseName" (input)="getCoursesByName()" /> -->
+<!-- <input type="checkbox" #chb (change)="showStudentByDone(chb.checked)"/>show active students<br/> -->
+<div >
+    <div *ngFor=" let i of courses"  [ngClass]="{'list-group-item-danger': i.date}">
+        <div class="card" style="width: 18rem;">
+            
+                <img src="{{ i.image }}" class="card-img-top"  />  
+          
+            <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn btn-outline-secondary" (click)="showDetails2(i)">show Details</button>
+                
+              </div>
+        </div>  
+    </div>
+</div>
+<br>
